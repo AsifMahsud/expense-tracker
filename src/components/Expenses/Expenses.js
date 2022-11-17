@@ -23,7 +23,11 @@ const Expenses = props => {
           selected={filteredYear}
           onChangeFilter={onFilterChangeHandler}
         />
-        <ExpensesList items={filteredExpenses} />
+        <ExpensesList
+          items={filteredExpenses}
+          onRemoveExpenseItem={expenseId =>
+            props.onRemoveExpenseItem(expenseId)}
+        />
       </Card>
     </li>
   );

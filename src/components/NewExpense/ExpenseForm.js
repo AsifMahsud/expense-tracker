@@ -9,7 +9,7 @@ const ExpenseForm = (props) => {
   const [userInput, setUserInput] = useState({
     title: "",
     amount: "0.01",
-    date: "2019-09-01"
+    date: new Date().toISOString().split('T')[0]
   });
 
   const titleChangeHandler = event => {
